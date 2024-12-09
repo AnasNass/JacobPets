@@ -1,0 +1,9 @@
+[
+    { "id": 1, "name": "Dog Food", "price": "$20", "description": "High-quality dog food." },
+    { "id": 2, "name": "Cat Food", "price": "$15", "description": "Healthy cat food." },
+    { "id": 3, "name": "Bird Seed", "price": "$10", "description": "Premium bird seed." },
+    { "id": 4, "name": "Dog Collar", "price": "$5", "description": "Adjustable dog collar." },
+    { "id": 5, "name": "Cat Toy", "price": "$3", "description": "Interactive cat toy." },
+    { "id": 6, "name": "Aquarium Kit", "price": "$50", "description": "Complete aquarium set." }
+  ]
+  

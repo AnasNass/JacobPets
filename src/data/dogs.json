@@ -1,0 +1,5 @@
+[
+    { "id": 1, "name": "Buddy", "breed": "Labrador", "age": "2 years", "description": "Friendly and playful." },
+    { "id": 2, "name": "Milo", "breed": "Beagle", "age": "3 years", "description": "Energetic and loves walks." }
+  ]
+  
