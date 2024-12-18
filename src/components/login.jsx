@@ -7,14 +7,27 @@ import FormInput from "./common/FormInput";
 const Login = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [error, setError] = React.useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setError("");
       await signInWithEmailAndPassword(auth, email, password);
-      alert("Login successful");
-    } catch (error) {
-      alert(error.message);
+    } catch (err) {
+      switch (err.code) {
+        case "auth/wrong-password":
+          setError("Incorrect password");
+          break;
+        case "auth/user-not-found":
+          setError("No account found with this email");
+          break;
+        case "auth/invalid-email":
+          setError("Invalid email address");
+          break;
+        default:
+          setError("Failed to login. Please try again.");
+      }
     }
   };
 
@@ -22,6 +35,11 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary">
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md w-96">
         <h2 className="text-3xl font-bold text-center mb-6 text-primary">Login</h2>
+        {error && (
+          <div className="mb-4 p-2 bg-red-100 text-red-600 rounded text-sm">
+            {error}
+          </div>
+        )}
         <FormInput
           type="email"
           placeholder="Email"

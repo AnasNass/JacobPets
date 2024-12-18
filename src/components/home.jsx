@@ -2,8 +2,9 @@ import React from "react";
 import PageContainer from "./layout/PageContainer";
 import HeroSection from "./home/HeroSection";
 import DogAccordion from "./home/DogAccordion";
+import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ user }) => {
   return (
     <PageContainer>
       <HeroSection />
@@ -16,6 +17,33 @@ const Home = () => {
             Our mission is to provide a safe haven for abandoned and neglected dogs, giving them 
             a second chance at a happy life.
           </p>
+        </section>
+
+        <section className="mb-12 bg-primary/10 p-8 rounded-xl text-center">
+          <h2 className="text-3xl font-bold text-primary mb-4">
+            {user ? "Your Special Offer" : "Get a Special Offer!"}
+          </h2>
+          <p className="text-lg text-gray-700 mb-6">
+            {user 
+              ? "Access your 15% discount voucher for your first purchase!"
+              : "Register today and receive a printable voucher for 15% off your first purchase!"
+            }
+          </p>
+          {user ? (
+            <Link 
+              to="/voucher" 
+              className="inline-block bg-accent text-white px-8 py-3 rounded-lg hover:bg-accent/90 transition-colors"
+            >
+              View My Voucher
+            </Link>
+          ) : (
+            <Link 
+              to="/register" 
+              className="inline-block bg-accent text-white px-8 py-3 rounded-lg hover:bg-accent/90 transition-colors"
+            >
+              Register Now
+            </Link>
+          )}
         </section>
 
         <DogAccordion />
