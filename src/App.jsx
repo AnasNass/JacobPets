@@ -37,7 +37,7 @@ const App = () => {
   return (
     <Router>
       <Navbar user={user} />
-      <div className="mt-16"> {/* Add margin-top to account for fixed navbar */}
+      <div className="mt-14">
         <Routes>
           <Route path="/" element={<Home user={user} />} />
           <Route path="/products" element={<Products />} />
