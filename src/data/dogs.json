@@ -1,5 +1,56 @@
 [
-    { "id": 1, "name": "Buddy", "breed": "Labrador", "age": "2 years", "description": "Friendly and playful." },
-    { "id": 2, "name": "Milo", "breed": "Beagle", "age": "3 years", "description": "Energetic and loves walks." }
+    {
+      "id": "1",
+      "name": "Max",
+      "breed": "Golden Retriever",
+      "age": 2,
+      "description": "A loving 2-year-old Golden Retriever who enjoys long walks and playing fetch",
+      "image": "/images/dogs/max.jpg",
+      "status": "available"
+    },
+    {
+      "id": "2",
+      "name": "Luna",
+      "breed": "Labrador Mix",
+      "age": 1,
+      "description": "Sweet 1-year-old Labrador mix who loves cuddles and treats",
+      "image": "/images/dogs/luna.jpg",
+      "status": "available"
+    },
+    {
+      "id": "3",
+      "name": "Rocky",
+      "breed": "German Shepherd",
+      "age": 3,
+      "description": "Intelligent and loyal German Shepherd, great with families and other dogs",
+      "image": "/images/dogs/rocky.jpg",
+      "status": "available"
+    },
+    {
+      "id": "4",
+      "name": "Bella",
+      "breed": "Beagle",
+      "age": 2,
+      "description": "Energetic Beagle who loves to explore and play with toys",
+      "image": "/images/dogs/bella.jpg",
+      "status": "pending"
+    },
+    {
+      "id": "5",
+      "name": "Charlie",
+      "breed": "Poodle",
+      "age": 4,
+      "description": "Gentle and smart Poodle, perfectly trained and great with kids",
+      "image": "/images/dogs/charlie.jpg",
+      "status": "available"
+    },
+    {
+      "id": "6",
+      "name": "Daisy",
+      "breed": "Border Collie",
+      "age": 1,
+      "description": "Young Border Collie with lots of energy and eagerness to learn",
+      "image": "/images/dogs/daisy.jpg",
+      "status": "available"
+    }
   ]
-  
